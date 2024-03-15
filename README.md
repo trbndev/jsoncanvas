@@ -1,4 +1,4 @@
-# pkg-placeholder
+# @trbn/jsoncanvas
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -6,32 +6,75 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-_description_
+`@trbn/jsoncanvas` is an implementation of the [JSONCanvas Spec](https://jsoncanvas.org/spec/1.0/) in TypeScript.
 
-> **Note**:
-> Replace `pkg-placeholder`, `_description_` and `antfu` globally to use this template.
+> Note: This package does NOT include a rendering engine. It is only a data structure for a canvas.
 
-## Sponsors
+## Installation
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
+With pnpm:
+
+```bash
+pnpm install @trbn/jsoncanvas
+```
+
+
+## Example Usage
+
+```typescript
+import { JSONCanvas } from '@trbn/jsoncanvas';
+
+const canvas = new JSONCanvas();
+
+// Adds a text node to the canvas
+canvas.addNode({
+  id: 'node1',
+  type: 'text',
+  text: 'Hello, World!',
+  x: 100,
+  y: 100,
+  width: 100,
+  height: 100,
+});
+
+// Adds another text node to the canvas
+canvas.addNode({
+  id: 'node2',
+  type: 'text',
+  text: 'Hello, World 2!',
+  x: 200,
+  y: 200,
+  radius: 50,
+});
+
+// Adds an connection between node1 and node2
+canvas.addEdge({
+  id: 'edge1',
+  fromNode: 'node1',
+  toNode: 'node2',
+  label: 'Edge 1',
+});
+
+// Removes node2 and all connections to it
+canvas.removeNode('node2');
+
+// Outputs the canvas as a string
+console.log(canvas.toString());
+```
 
 ## License
 
-[MIT](./LICENSE) License © 2023-PRESENT [Anthony Fu](https://github.com/antfu)
+[MIT](./LICENSE) License © 2024-PRESENT [Torben Haack](https://github.com/haackt)
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/pkg-placeholder
-[npm-downloads-src]: https://img.shields.io/npm/dm/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/pkg-placeholder
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=pkg-placeholder
-[license-src]: https://img.shields.io/github/license/antfu/pkg-placeholder.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/pkg-placeholder/blob/main/LICENSE
-[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/pkg-placeholder
+[npm-version-src]: https://img.shields.io/npm/v/@trbn/jsoncanvas?style=flat&colorA=080f12&colorB=1fa669
+[npm-version-href]: https://npmjs.com/package/@trbn/jsoncanvas
+[npm-downloads-src]: https://img.shields.io/npm/dm/@trbn/jsoncanvas?style=flat&colorA=080f12&colorB=1fa669
+[npm-downloads-href]: https://npmjs.com/package/@trbn/jsoncanvas
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/@trbn/jsoncanvas?style=flat&colorA=080f12&colorB=1fa669&label=minzip
+[bundle-href]: https://bundlephobia.com/result?p=@trbn/jsoncanvas
+[license-src]: https://img.shields.io/github/license/haackt/@trbn/jsoncanvas.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/haackt/@trbn/jsoncanvas/blob/main/LICENSE
+[jsdocs-src]: https://img.shields.io/badge/@trbn/jsoncanvas-080f12?style=flat&colorA=080f12&colorB=1fa669
+[jsdocs-href]: https://www.jsdocs.io/package/@trbn/jsoncanvas
