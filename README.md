@@ -74,7 +74,7 @@ console.log(canvas.toString());
 [npm-downloads-href]: https://npmjs.com/package/@trbn/jsoncanvas
 [bundle-src]: https://img.shields.io/bundlephobia/minzip/@trbn/jsoncanvas?style=flat&colorA=080f12&colorB=1fa669&label=minzip
 [bundle-href]: https://bundlephobia.com/result?p=@trbn/jsoncanvas
-[license-src]: https://img.shields.io/github/license/haackt/@trbn/jsoncanvas.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-src]: https://img.shields.io/github/license/haackt/jsoncanvas.svg?style=flat&colorA=080f12&colorB=1fa669
 [license-href]: https://github.com/haackt/jsoncanvas/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/@trbn/jsoncanvas-080f12?style=flat&colorA=080f12&colorB=1fa669
 [jsdocs-href]: https://www.jsdocs.io/package/@trbn/jsoncanvas
