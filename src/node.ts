@@ -1,4 +1,4 @@
-import type CanvasColor from "./color";
+import CanvasColor from "./color";
 
 export interface GenericNode {
     id: string;

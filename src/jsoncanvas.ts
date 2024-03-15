@@ -1,5 +1,5 @@
-import type Edge from "./edge";
-import type GenericNode from "./node";
+import Edge from "./edge";
+import GenericNode from "./node";
 
 export class JSONCanvas {
     private nodes: GenericNode[] = [];
