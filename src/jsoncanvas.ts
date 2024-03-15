@@ -14,51 +14,51 @@ export class JSONCanvas {
         }
     }
 
-    public add_node(node: GenericNode) {
+    public addNode(node: GenericNode) {
         if(this.nodes.find(n => n.id === node.id)) {
             throw new Error("A node with the same ID already exists in this.nodes");
         }
         this.nodes.push(node);
     }
 
-    public add_edge(edge: Edge) {
+    public addEdge(edge: Edge) {
         if(this.edges.find(e => e.id === edge.id)) {
             throw new Error("An edge with the same ID already exists in this.edges");
         }
         this.edges.push(edge);
     }
 
-    public get_node(id: string) {
+    public getNode(id: string) {
         return this.nodes.find(n => n.id === id);
     }
-    public get_edge(id: string) {
+    public getEdge(id: string) {
         return this.edges.find(e => e.id === id);
     }
 
-    public get_nodes() {
+    public getNodes() {
         return this.nodes;
     }
-    public get_edges() {
+    public getEdges() {
         return this.edges;
     }
 
-    public remove_node(id: string) {
+    public removeNode(id: string) {
         this.nodes = this.nodes.filter(n => n.id !== id);
         this.edges = this.edges.filter(e => e.fromNode !== id && e.toNode !== id);
     }
 
-    public remove_edge(id: string) {
+    public removeEdge(id: string) {
         this.edges = this.edges.filter(e => e.id !== id);
     }
 
-    public to_string() {
+    public toString() {
         return JSON.stringify({
             nodes: this.nodes,
             edges: this.edges
         });
     }
 
-    public static from_string(json: string) {
+    public static fromString(json: string) {
         const obj = JSON.parse(json);
         return new JSONCanvas(obj.nodes, obj.edges);
     }

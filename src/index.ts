@@ -1,6 +1,6 @@
 import { CanvasColor } from './color'
 import { EdgeEnd, EdgeSide, Edge } from './edge'
-import { GenericNode, GroupNode, LinkNode, NodeType, TextNode } from './node'
+import { GenericNode, GroupNode, LinkNode, TextNode } from './node'
 import { JSONCanvas } from './jsoncanvas'
 
 export {
@@ -11,7 +11,6 @@ export {
     GenericNode,
     GroupNode,
     LinkNode,
-    NodeType,
     TextNode,
     JSONCanvas
 }
