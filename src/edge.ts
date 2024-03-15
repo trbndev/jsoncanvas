@@ -1,4 +1,4 @@
-import CanvasColor from "./color";
+import type CanvasColor from "./color";
 
 export type EdgeSide = "top" | "right" | "bottom" | "left";
 export type EdgeEnd = "none" | "arrow";
