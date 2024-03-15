@@ -1,7 +1,7 @@
 {
   "name": "@trbn/jsoncanvas",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "packageManager": "pnpm@8.15.3",
   "description": "TypeScript Bindings for JSONCanvas Specification",
   "author": "Torben Haack <hallo@torben.page>",
@@ -40,7 +40,7 @@
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp && npm publish --access=public",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
