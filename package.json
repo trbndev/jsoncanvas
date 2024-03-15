@@ -1,18 +1,17 @@
 {
-  "name": "pkg-placeholder",
+  "name": "@trbn/jsoncanvas",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "packageManager": "pnpm@8.15.3",
-  "description": "_description_",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "description": "TypeScript Bindings for JSONCanvas Specification",
+  "author": "Torben Haack <hallo@torben.page>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/pkg-placeholder#readme",
+  "homepage": "https://github.com/haackt/jsoncanvas#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/pkg-placeholder.git"
+    "url": "git+https://github.com/haackt/jsoncanvas.git"
   },
-  "bugs": "https://github.com/antfu/pkg-placeholder/issues",
+  "bugs": "https://github.com/haackt/jsoncanvas/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
